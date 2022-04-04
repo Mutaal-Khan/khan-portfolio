@@ -1,0 +1,1402 @@
+/* 
+    * * * In the name of Allah, the Entirely Merciful, the Especially Merciful. * * *
+*/
+* {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  background: #1e2227;
+}
+
+/*
+    -----------------------------
+    * Section: Importing Modules
+    -----------------------------
+*/
+/*
+    Bismillah
+*/
+/*
+    *   [KHAN]
+        _MutaalKhan-configuration.scss
+        author: [KHAN]
+
+        github.com/MutaalKhan
+        instagram.com/mutaal_khan
+
+        [KHAN] | THE BELIEVERS ARE SUCCESSFUL | [KHAN] (C) 2022
+*/
+/*
+    _MutaalKhan-configuration.scss
+
+    Sections:
+        Flex Box
+        Brand Colors
+        setIcon
+        toStringRGB
+*/
+/*
+    ----------------------
+    *   Section: Flex Box
+    ----------------------
+*/
+/*
+    Flex Box
+        -   The - @mixin flex-box() - is going to be used to create a flex box with less amount of code.
+            To have a flex box with specific attributes, this mixin is going to have paramaters on it.
+            Parameter value should be the flex box property valid value.
+
+        Flex box parameters:
+            1: $direction
+            2: $wrap
+            3: $justify-content
+            4: $align-items
+*/
+/*
+    --------------------------
+    *   Section: Brand Colors
+    --------------------------
+*/
+/*
+    Brand Colors
+        -   Colors should have been classified the same below format. 
+            They are in three class and every class is like an array that can hold many colors.
+
+        Color Levels:
+            1: Primary Colors
+            2: Secondary Colors
+            3: Tertiary Colors
+*/
+/*
+    * Brand Colors - [KHAN]
+*/
+/*
+    -------------------------
+    *   Section: setIcon
+    -------------------------
+*/
+/*
+    Set Icon
+        -   @mixin setIcon() will set an icon at the background of a block/inline-block element.
+            The value should be url() inside an array of icons. To set the specific icon, each icon has an ID on an array.
+            $icon-size will be used to define the size of icon/set the value of background-size.
+*/
+/*
+    -------------------------
+    *   Section: toStringRGB
+    -------------------------
+*/
+/*
+    toStringRGB
+        -   The function toStringRGB will make a - string rgb - from the given color value.
+            In a case to have a string of i.e. "rgb(255, 255, 255)" not rgb(255, 255, 255),
+            The function toStringRGB will return the string rgb of color.
+
+*/
+@use 'sass:color';
+/*
+    * _MutaalKhan-configuration.
+
+        Update: 10:21 AM - Friday, March 4, 2022 - Kabul, Afghanistan
+    ?   Last Update: 10:21 AM - Friday, March 4, 2022 - Kabul, Afghanistan
+
+    [KHAN] | THE BELIEVERS ARE SUCCESSFUL | [KHAN] (C) 2021
+*/
+/*
+ * Bismillah
+*/
+/*
+    ------------------------
+    *   Section: Navigation
+    ------------------------
+*/
+nav {
+  height: 55px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+nav .nav-logo {
+  margin: 15px 0px 0px 20px;
+  opacity: 0.6;
+}
+
+/*
+    ---------------------------------------
+    *   Section: Header & Header Container
+    ---------------------------------------
+*/
+header {
+  width: 100%;
+}
+
+header .header-container {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  /* flex-flow
+        $direction: row/row-reverse/column/column-reverse
+        $wrap: wrap/nowrap/wrap-reverse
+    */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* justify-content:
+        - flex-direction > row/row-reverse:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column/column-reverse:
+            flex-start/baseline/center/flex-end
+
+    */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* align-items:
+        - flex-direction > row:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column:
+            flex-start/baseline/center/flex-end
+
+    */
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/*
+    ---------------------
+    *   Section: Article
+    ---------------------
+*/
+.header-container article .header-button {
+  display: inline-block;
+  border-radius: 5px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: #1e2228;
+  text-decoration: none;
+  padding: 10px 50px;
+  font-size: 15pt;
+  font-weight: bolder;
+}
+
+.header-container .header-socialmedia {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  /* flex-flow
+        $direction: row/row-reverse/column/column-reverse
+        $wrap: wrap/nowrap/wrap-reverse
+    */
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  /* justify-content:
+        - flex-direction > row/row-reverse:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column/column-reverse:
+            flex-start/baseline/center/flex-end
+
+    */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* align-items:
+        - flex-direction > row:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column:
+            flex-start/baseline/center/flex-end
+
+    */
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+}
+
+.header-container .header-socialmedia .hdr-icons {
+  text-decoration: none;
+  display: block;
+  height: 30px;
+  width: 30px;
+  margin: 0px 3px;
+}
+
+/*
+    -------------------------------
+    *   Section: Importing Modules
+    -------------------------------
+*/
+/*
+    ----------------------------
+    * Section: max-width: 360px
+    ----------------------------
+*/
+@media screen and (max-width: 360px) {
+  footer .footer-container .footer-logo {
+    text-align: left;
+  }
+  footer .footer-container .footer-logo h1,
+  footer .footer-container .footer-logo h2 {
+    font-size: 10pt;
+  }
+  footer .copyright-social-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: column-reverse nowrap;
+            flex-flow: column-reverse nowrap;
+    /* flex-flow
+        $direction: row/row-reverse/column/column-reverse
+        $wrap: wrap/nowrap/wrap-reverse
+    */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* justify-content:
+        - flex-direction > row/row-reverse:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column/column-reverse:
+            flex-start/baseline/center/flex-end
+
+    */
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    /* align-items:
+        - flex-direction > row:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column:
+            flex-start/baseline/center/flex-end
+
+    */
+  }
+  footer .copyright-social-media .ftr-sm {
+    margin-right: 25.5px;
+    margin-top: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    /* flex-flow
+        $direction: row/row-reverse/column/column-reverse
+        $wrap: wrap/nowrap/wrap-reverse
+    */
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    /* justify-content:
+        - flex-direction > row/row-reverse:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column/column-reverse:
+            flex-start/baseline/center/flex-end
+
+    */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* align-items:
+        - flex-direction > row:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column:
+            flex-start/baseline/center/flex-end
+
+    */
+  }
+  footer .copyright-social-media .ftr-sm .fsm-icons {
+    height: 20px;
+    width: 20px;
+  }
+  footer .copyright-social-media .ftr-sm .fsm-icons.github, footer .copyright-social-media .ftr-sm .fsm-icons.instagram, footer .copyright-social-media .ftr-sm .fsm-icons.facebook {
+    background-size: 15px;
+  }
+  footer .copyright-social-media .ftr-copyright {
+    font-size: 8pt;
+    letter-spacing: 2px;
+    font-weight: normal;
+    margin: 0 30px;
+  }
+}
+
+/*
+    -----------------------
+    * Section: Backgrounds
+    -----------------------
+*/
+/*
+    -----------------
+    * Section: Colors
+    -----------------
+*/
+header {
+  color: #c8c8c8;
+}
+
+header .header-button {
+  background: #0a0f14;
+  background: #ff3232;
+}
+
+/*
+    -----------------------
+    * Section: Icons
+    -----------------------
+*/
+/*
+    --------------------
+    * Section: Elements
+    --------------------
+*/
+.hdr-icons.github {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"%3E%3Cpath fill="rgb(210, 210, 210)" d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5C64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9c26.4 39.1 77.9 32.5 104 26c5.7-23.5 17.9-44.5 34.7-60.8c-140.6-25.2-199.2-111-199.2-213c0-49.5 16.3-95 48.3-131.7c-20.4-60.5 1.9-112.3 4.9-120c58.1-5.2 118.5 41.6 123.2 45.3c33-8.9 70.7-13.6 112.9-13.6c42.4 0 80.2 4.9 113.5 13.9c11.3-8.6 67.3-48.8 121.3-43.9c2.9 7.7 24.7 58.3 5.5 118c32.4 36.8 48.9 82.7 48.9 132.3c0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9c177.1-59.7 304.6-227 304.6-424.1c0-247.2-200.4-447.3-447.5-447.3z"%2F%3E%3C%2Fsvg%3E') no-repeat center center;
+  /*
+        background:
+            url/map-get: - SASS built-in function
+            no-repeat   - default
+            center  -default
+            center -default
+    */
+  background-size: 25px;
+}
+
+.hdr-icons.instagram {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cpath fill="rgb(210, 210, 210)" d="M160 128a32 32 0 1 1-32-32a32.1 32.1 0 0 1 32 32Zm68-44v88a56 56 0 0 1-56 56H84a56 56 0 0 1-56-56V84a56 56 0 0 1 56-56h88a56 56 0 0 1 56 56Zm-52 44a48 48 0 1 0-48 48a48 48 0 0 0 48-48Zm16-52a12 12 0 1 0-12 12a12 12 0 0 0 12-12Z"%2F%3E%3C%2Fsvg%3E') no-repeat center center;
+  /*
+        background:
+            url/map-get: - SASS built-in function
+            no-repeat   - default
+            center  -default
+            center -default
+    */
+  background-size: 25px;
+}
+
+.hdr-icons.facebook {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="rgb(210, 210, 210)" d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02Z"%2F%3E%3C%2Fsvg%3E') no-repeat center center;
+  /*
+        background:
+            url/map-get: - SASS built-in function
+            no-repeat   - default
+            center  -default
+            center -default
+    */
+  background-size: 25px;
+}
+
+.main {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 20px 0px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  /* flex-flow
+        $direction: row/row-reverse/column/column-reverse
+        $wrap: wrap/nowrap/wrap-reverse
+    */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* justify-content:
+        - flex-direction > row/row-reverse:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column/column-reverse:
+            flex-start/baseline/center/flex-end
+
+    */
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  /* align-items:
+        - flex-direction > row:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column:
+            flex-start/baseline/center/flex-end
+
+    */
+}
+
+.main .main-container {
+  width: 70%;
+  max-width: 800px;
+}
+
+.sections {
+  margin: 80px 0px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 50px 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: max-content;
+      grid-template-rows: -webkit-max-content;
+      grid-template-rows: max-content;
+  grid-gap: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sections .sc-1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.sections .sc-2 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+.sections .section-contents .section-article {
+  text-align: justify;
+}
+
+.sections .section-contents .section-article .section-title {
+  font-size: 20pt;
+  font-weight: 400;
+}
+
+.sections .section-contents .section-article .section-description {
+  margin-top: 5px;
+  font-size: 14pt;
+}
+
+.sections .section-contents .section-article .section-description .section-buttons {
+  display: inline-block;
+  padding: 10px 40px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  font-size: 13pt;
+  opacity: 0.8;
+}
+
+.sections .section-contents .section-article .section-description .section-buttons:hover {
+  opacity: 1;
+}
+
+.sections .section-contents .section-image {
+  height: 300px;
+  width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  /* flex-flow
+        $direction: row/row-reverse/column/column-reverse
+        $wrap: wrap/nowrap/wrap-reverse
+    */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* justify-content:
+        - flex-direction > row/row-reverse:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column/column-reverse:
+            flex-start/baseline/center/flex-end
+
+    */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* align-items:
+        - flex-direction > row:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column:
+            flex-start/baseline/center/flex-end
+
+    */
+}
+
+.sections .section-contents .section-image .section-image-el {
+  width: 100%;
+}
+
+.section-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  /* flex-flow
+        $direction: row/row-reverse/column/column-reverse
+        $wrap: wrap/nowrap/wrap-reverse
+    */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* justify-content:
+        - flex-direction > row/row-reverse:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column/column-reverse:
+            flex-start/baseline/center/flex-end
+
+    */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* align-items:
+        - flex-direction > row:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column:
+            flex-start/baseline/center/flex-end
+
+    */
+}
+
+.section-link span a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 
+    // * Contributors
+    This section will be added in the future
+*/
+@media screen and (max-width: 900px) {
+  .main .main-container {
+    width: 85%;
+  }
+  .main .section-image {
+    height: 200px !important;
+    width: 250px !important;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .main .main-container {
+    width: 75%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main .sections {
+    margin-top: 70px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    place-items: center;
+    grid-gap: 10px;
+  }
+  .main .sections .sc-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    /* flex-flow
+        $direction: row/row-reverse/column/column-reverse
+        $wrap: wrap/nowrap/wrap-reverse
+    */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* justify-content:
+        - flex-direction > row/row-reverse:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column/column-reverse:
+            flex-start/baseline/center/flex-end
+
+    */
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    /* align-items:
+        - flex-direction > row:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column:
+            flex-start/baseline/center/flex-end
+
+    */
+    width: 100%;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  .main .sections .sc-2 {
+    width: 100%;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    /* flex-flow
+        $direction: row/row-reverse/column/column-reverse
+        $wrap: wrap/nowrap/wrap-reverse
+    */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* justify-content:
+        - flex-direction > row/row-reverse:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column/column-reverse:
+            flex-start/baseline/center/flex-end
+
+    */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* align-items:
+        - flex-direction > row:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column:
+            flex-start/baseline/center/flex-end
+
+    */
+  }
+  .main .sections .section-image {
+    height: auto !important;
+    width: 100% !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    /* flex-flow
+        $direction: row/row-reverse/column/column-reverse
+        $wrap: wrap/nowrap/wrap-reverse
+    */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* justify-content:
+        - flex-direction > row/row-reverse:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column/column-reverse:
+            flex-start/baseline/center/flex-end
+
+    */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* align-items:
+        - flex-direction > row:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column:
+            flex-start/baseline/center/flex-end
+
+    */
+  }
+  .main .sections .section-image .section-image-el {
+    width: 100%;
+  }
+  .main .about .sc-1,
+  .main .pages .sc-1,
+  .main .feedback .sc-1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .main .about .sc-2,
+  .main .pages .sc-2,
+  .main .feedback .sc-2 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .main .projects .sc-1,
+  .main .support .sc-1 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .main .projects .sc-2,
+  .main .support .sc-2 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+}
+
+main .section-article .section-title {
+  color: #d2d2d2;
+}
+
+main .section-article .section-description {
+  color: #b4b4b4;
+}
+
+main .section-article .section-description a {
+  background: #0a0f14;
+  color: #dce6f0;
+}
+
+/*
+ * Bismillah
+*/
+/*
+    ---------------------------------------
+    *   Section: Footer & Footer Container
+    ---------------------------------------
+*/
+footer {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  /* flex-flow
+        $direction: row/row-reverse/column/column-reverse
+        $wrap: wrap/nowrap/wrap-reverse
+    */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* justify-content:
+        - flex-direction > row/row-reverse:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column/column-reverse:
+            flex-start/baseline/center/flex-end
+
+    */
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  /* align-items:
+        - flex-direction > row:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column:
+            flex-start/baseline/center/flex-end
+
+    */
+}
+
+footer .footer-container {
+  min-height: 400px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  /* flex-flow
+        $direction: row/row-reverse/column/column-reverse
+        $wrap: wrap/nowrap/wrap-reverse
+    */
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  /* justify-content:
+        - flex-direction > row/row-reverse:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column/column-reverse:
+            flex-start/baseline/center/flex-end
+
+    */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* align-items:
+        - flex-direction > row:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column:
+            flex-start/baseline/center/flex-end
+
+    */
+  text-align: center;
+}
+
+/*
+    -------------------------
+    *   Section: Footer Logo
+    -------------------------
+*/
+.footer-logo {
+  margin-top: 40px;
+  width: 100%;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+.footer-logo h1 {
+  font-size: 25pt;
+  font-weight: normal;
+  margin: 2.5px 0px;
+}
+
+/*
+    ----------------------------
+    *   Section: Footer Content
+    ----------------------------
+*/
+.footer-content {
+  width: 80%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 30px 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content max-content max-content;
+      grid-template-columns: -webkit-max-content -webkit-max-content -webkit-max-content;
+      grid-template-columns: max-content max-content max-content;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-content .footer-content-1,
+.footer-content .footer-content-2,
+.footer-content .footer-content-3 {
+  text-align: left;
+}
+
+.footer-content ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: left;
+  line-height: 2rem;
+}
+
+.footer-content ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  /* flex-flow
+        $direction: row/row-reverse/column/column-reverse
+        $wrap: wrap/nowrap/wrap-reverse
+    */
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  /* justify-content:
+        - flex-direction > row/row-reverse:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column/column-reverse:
+            flex-start/baseline/center/flex-end
+
+    */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* align-items:
+        - flex-direction > row:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column:
+            flex-start/baseline/center/flex-end
+
+    */
+}
+
+.footer-content ul li a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  /* flex-flow
+        $direction: row/row-reverse/column/column-reverse
+        $wrap: wrap/nowrap/wrap-reverse
+    */
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  /* justify-content:
+        - flex-direction > row/row-reverse:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column/column-reverse:
+            flex-start/baseline/center/flex-end
+
+    */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* align-items:
+        - flex-direction > row:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column:
+            flex-start/baseline/center/flex-end
+
+    */
+}
+
+.footer-content ul li .fc-icons {
+  margin: 2px 10px 2px 0px;
+  display: block;
+  height: 30px;
+  width: 30px;
+}
+
+/*
+    ----------------------------------
+    *   Section: Footer Copyright (C) & Social Media
+    ----------------------------------
+*/
+footer .copyright-social-media {
+  height: 60px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  /* flex-flow
+        $direction: row/row-reverse/column/column-reverse
+        $wrap: wrap/nowrap/wrap-reverse
+    */
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  /* justify-content:
+        - flex-direction > row/row-reverse:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column/column-reverse:
+            flex-start/baseline/center/flex-end
+
+    */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* align-items:
+        - flex-direction > row:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column:
+            flex-start/baseline/center/flex-end
+
+    */
+}
+
+footer .copyright-social-media .ftr-sm {
+  margin: 0;
+  margin-top: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  /* flex-flow
+        $direction: row/row-reverse/column/column-reverse
+        $wrap: wrap/nowrap/wrap-reverse
+    */
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  /* justify-content:
+        - flex-direction > row/row-reverse:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column/column-reverse:
+            flex-start/baseline/center/flex-end
+
+    */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* align-items:
+        - flex-direction > row:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column:
+            flex-start/baseline/center/flex-end
+
+    */
+}
+
+footer .copyright-social-media .ftr-sm .fsm-icons {
+  text-decoration: none;
+  display: block;
+  height: 30px;
+  width: 30px;
+  margin: 0px 3px;
+}
+
+footer .copyright-social-media .ftr-copyright {
+  font-size: 11pt;
+  letter-spacing: 4px;
+  font-weight: 600;
+  margin: 0 30px;
+}
+
+/*
+    -------------------------------
+    *   Section: Importing Modules
+    -------------------------------
+*/
+/*
+    ----------------------------
+    * Section: max-width: 360px
+    ----------------------------
+*/
+@media screen and (max-width: 360px) {
+  footer .footer-container .footer-logo h1 {
+    font-size: 25pt;
+  }
+  footer .copyright-social-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: column-reverse nowrap;
+            flex-flow: column-reverse nowrap;
+    /* flex-flow
+        $direction: row/row-reverse/column/column-reverse
+        $wrap: wrap/nowrap/wrap-reverse
+    */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* justify-content:
+        - flex-direction > row/row-reverse:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column/column-reverse:
+            flex-start/baseline/center/flex-end
+
+    */
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    /* align-items:
+        - flex-direction > row:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column:
+            flex-start/baseline/center/flex-end
+
+    */
+  }
+  footer .copyright-social-media .ftr-sm {
+    margin-right: 25.5px;
+    margin-top: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    /* flex-flow
+        $direction: row/row-reverse/column/column-reverse
+        $wrap: wrap/nowrap/wrap-reverse
+    */
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    /* justify-content:
+        - flex-direction > row/row-reverse:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column/column-reverse:
+            flex-start/baseline/center/flex-end
+
+    */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* align-items:
+        - flex-direction > row:
+            flex-start/baseline/center/flex-end
+        - flex-direction > column:
+            flex-start/baseline/center/flex-end
+
+    */
+  }
+  footer .copyright-social-media .ftr-copyright {
+    letter-spacing: 2px;
+    font-weight: normal;
+    margin: 0 30px;
+  }
+}
+
+/*
+    ----------------------------
+    * Section: max-width: 1000px
+    ----------------------------
+*/
+@media screen and (max-width: 1000px) {
+  footer .footer-content {
+    -ms-grid-columns: max-content max-content;
+        grid-template-columns: -webkit-max-content -webkit-max-content;
+        grid-template-columns: max-content max-content;
+    -ms-grid-rows: max-content max-content;
+        grid-template-rows: -webkit-max-content -webkit-max-content;
+        grid-template-rows: max-content max-content;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+/*
+    ----------------------------
+    * Section: max-width: 500px
+    ----------------------------
+*/
+@media screen and (max-width: 700px) {
+  footer .footer-content {
+    -ms-grid-columns: max-content;
+        grid-template-columns: -webkit-max-content;
+        grid-template-columns: max-content;
+    -ms-grid-rows: max-content max-content max-content;
+        grid-template-rows: -webkit-max-content -webkit-max-content -webkit-max-content;
+        grid-template-rows: max-content max-content max-content;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+/*
+    -----------------------
+    * Section: Backgrounds
+    -----------------------
+*/
+footer {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/*
+    -----------------
+    * Section: Colors
+    -----------------
+*/
+footer .footer-logo {
+  color: #d2d2d2;
+}
+
+footer .footer-content {
+  color: #d2d2d2;
+}
+
+footer .footer-content h2 {
+  color: #ff0032;
+}
+
+footer .footer-content p {
+  color: #b4b4b4;
+}
+
+footer .copyright-social-media {
+  color: #d2d2d2;
+}
+
+/*
+    -----------------------
+    * Section: Icons
+    -----------------------
+*/
+/*
+    ----------------------------
+    * Section: Content Elements
+    ----------------------------
+*/
+.fc-icons.fci-home {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="rgb(255, 0, 50)" d="M12.74 2.32a1 1 0 0 0-1.48 0l-9 10A1 1 0 0 0 3 14h2v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7h2a1 1 0 0 0 1-1a1 1 0 0 0-.26-.68z"%2F%3E%3C%2Fsvg%3E') no-repeat center center;
+  /*
+        background:
+            url/map-get: - SASS built-in function
+            no-repeat   - default
+            center  -default
+            center -default
+    */
+  background-size: 20px;
+}
+
+.fc-icons.fci-about {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"%3E%3Cpath fill="rgb(255, 0, 50)" d="M12.432 0c1.34 0 2.01.912 2.01 1.957c0 1.305-1.164 2.512-2.679 2.512c-1.269 0-2.009-.75-1.974-1.99C9.789 1.436 10.67 0 12.432 0zM8.309 20c-1.058 0-1.833-.652-1.093-3.524l1.214-5.092c.211-.814.246-1.141 0-1.141c-.317 0-1.689.562-2.502 1.117l-.528-.88c2.572-2.186 5.531-3.467 6.801-3.467c1.057 0 1.233 1.273.705 3.23l-1.391 5.352c-.246.945-.141 1.271.106 1.271c.317 0 1.357-.392 2.379-1.207l.6.814C12.098 19.02 9.365 20 8.309 20z"%2F%3E%3C%2Fsvg%3E') no-repeat center center;
+  /*
+        background:
+            url/map-get: - SASS built-in function
+            no-repeat   - default
+            center  -default
+            center -default
+    */
+  background-size: 20px;
+}
+
+.fc-icons.fci-projects {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"%3E%3Cpath fill="rgb(255, 0, 50)" d="M9 4.5c-.749 0-1.442.235-2.012.635c-.037-.573-.168-1.07-.409-1.51A5 5 0 0 1 14 8h2.251a1.75 1.75 0 0 1 1.75 1.749v5.5A1.75 1.75 0 0 1 16.25 17h-5.5A1.75 1.75 0 0 1 9 15.25V13a4.983 4.983 0 0 1-2.02-.425c.013-.34.02-.697.02-1.075v-.062c0-.167 0-.359-.003-.567A3.49 3.49 0 0 0 9 11.5V9.75C9 8.784 9.784 8 10.75 8h1.75A3.5 3.5 0 0 0 9 4.5Zm4.771 5a5.012 5.012 0 0 1-3.271 3.271v2.479c0 .138.112.25.25.25h5.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-2.479Zm-1.608 0H10.75a.25.25 0 0 0-.25.25v1.413A3.515 3.515 0 0 0 12.163 9.5ZM4.581 2.125a.5.5 0 0 1 .119.598a.33.33 0 0 0-.013.09c0 .063.016.183.167.333c.073.073.129.125.19.182c.05.046.103.094.17.16c.13.124.267.27.39.453c.255.383.396.862.396 1.559c0 .853-.316 1.58-.809 2.026l.064.074c.28.344.443.79.545 1.23c.2.87.2 1.916.2 2.645v.025c0 2.787-.379 4.368-.796 5.272c-.21.455-.433.745-.626.927a1.48 1.48 0 0 1-.258.198a.99.99 0 0 1-.133.067S4.074 18 4 18s-.187-.036-.187-.036a.748.748 0 0 1-.133-.067a1.48 1.48 0 0 1-.258-.198c-.193-.183-.416-.472-.626-.927C2.379 15.868 2 14.287 2 11.5v-.025c0-.73 0-1.775.2-2.645c.102-.44.265-.886.545-1.23c.02-.025.042-.05.064-.074C2.316 7.08 2 6.353 2 5.5c0-.326.087-.715.207-1.074c.12-.36.288-.732.482-1.032c.231-.39.556-.717.808-.937a5.487 5.487 0 0 1 .432-.343l.044-.03a.5.5 0 0 1 .608.041Z"%2F%3E%3C%2Fsvg%3E') no-repeat center center;
+  /*
+        background:
+            url/map-get: - SASS built-in function
+            no-repeat   - default
+            center  -default
+            center -default
+    */
+  background-size: 20px;
+}
+
+.fc-icons.fci-pages {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"%3E%3Cpath fill="rgb(255, 0, 50)" d="M4 4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-2v2h1a.5.5 0 0 1 0 1h-2v-6a3 3 0 0 0-3-3H4V4Zm6 14H7.5V8H10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2ZM4 8h2.5v10H4a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2Zm5.5 7a.5.5 0 0 0 0 1h.5a.5.5 0 0 0 0-1h-.5Zm-6 .5a.5.5 0 0 0 .5.5h.5a.5.5 0 0 0 0-1H4a.5.5 0 0 0-.5.5Z"%2F%3E%3C%2Fsvg%3E') no-repeat center center;
+  /*
+        background:
+            url/map-get: - SASS built-in function
+            no-repeat   - default
+            center  -default
+            center -default
+    */
+  background-size: 20px;
+}
+
+.fc-icons.fci-support {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1.25em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 512"%3E%3Cpath fill="rgb(255, 0, 50)" d="M488 192H336v56c0 39.7-32.3 72-72 72s-72-32.3-72-72V126.4l-64.9 39C107.8 176.9 96 197.8 96 220.2v47.3l-80 46.2C.7 322.5-4.6 342.1 4.3 357.4l80 138.6c8.8 15.3 28.4 20.5 43.7 11.7L231.4 448H368c35.3 0 64-28.7 64-64h16c17.7 0 32-14.3 32-32v-64h8c13.3 0 24-10.7 24-24v-48c0-13.3-10.7-24-24-24zm147.7-37.4L555.7 16C546.9.7 527.3-4.5 512 4.3L408.6 64H306.4c-12 0-23.7 3.4-33.9 9.7L239 94.6c-9.4 5.8-15 16.1-15 27.1V248c0 22.1 17.9 40 40 40s40-17.9 40-40v-88h184c30.9 0 56 25.1 56 56v28.5l80-46.2c15.3-8.9 20.5-28.4 11.7-43.7z"%2F%3E%3C%2Fsvg%3E') no-repeat center center;
+  /*
+        background:
+            url/map-get: - SASS built-in function
+            no-repeat   - default
+            center  -default
+            center -default
+    */
+  background-size: 20px;
+}
+
+.fc-icons.fci-item {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="rgb(255, 0, 50)" d="M10.46 18a2.23 2.23 0 0 1-.91-.2a1.76 1.76 0 0 1-1.05-1.59V7.79A1.76 1.76 0 0 1 9.55 6.2a2.1 2.1 0 0 1 2.21.26l5.1 4.21a1.7 1.7 0 0 1 0 2.66l-5.1 4.21a2.06 2.06 0 0 1-1.3.46Z"%2F%3E%3C%2Fsvg%3E') no-repeat center center;
+  /*
+        background:
+            url/map-get: - SASS built-in function
+            no-repeat   - default
+            center  -default
+            center -default
+    */
+  background-size: 20px;
+}
+
+.fc-icons.fci-whatsapp {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cpath fill="rgb(255, 0, 50)" d="M128 24a104 104 0 0 0-91.2 154l-8.5 30A15.9 15.9 0 0 0 48 227.7l30-8.5A104 104 0 1 0 128 24Zm24.1 168h-.1a88.1 88.1 0 0 1-88-88.1A36 36 0 0 1 100 68a14.9 14.9 0 0 1 12.9 7.5L124.6 96a15.8 15.8 0 0 1-.2 16.1l-7.1 11.9a41.4 41.4 0 0 0 14.7 14.7l11.9-7.1a15.8 15.8 0 0 1 16.1-.2l20.5 11.7A14.9 14.9 0 0 1 188 156a36 36 0 0 1-35.9 36Z"%2F%3E%3Cpath fill="rgb(255, 0, 50)" d="M136.5 154.7a8.1 8.1 0 0 1-7.4.4a55.4 55.4 0 0 1-28.2-28.2a8.1 8.1 0 0 1 .4-7.4l9.4-15.6L99.4 84A19.9 19.9 0 0 0 80 103.9a72 72 0 0 0 72 72.1h.1a19.9 19.9 0 0 0 19.9-19.4l-19.9-11.3Z"%2F%3E%3C%2Fsvg%3E') no-repeat center center;
+  /*
+        background:
+            url/map-get: - SASS built-in function
+            no-repeat   - default
+            center  -default
+            center -default
+    */
+  background-size: 20px;
+}
+
+.fc-icons.fci-location {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"%3E%3Cpath fill="rgb(255, 0, 50)" d="M10 2.009c-2.762 0-5 2.229-5 4.99c0 4.774 5 11 5 11s5-6.227 5-11c0-2.76-2.238-4.99-5-4.99zm0 7.751a2.7 2.7 0 1 1 0-5.4a2.7 2.7 0 0 1 0 5.4z"%2F%3E%3C%2Fsvg%3E') no-repeat center center;
+  /*
+        background:
+            url/map-get: - SASS built-in function
+            no-repeat   - default
+            center  -default
+            center -default
+    */
+  background-size: 20px;
+}
+
+/*
+    ------------------------------
+    * Section: Copyright Elements
+    ------------------------------
+*/
+.fsm-icons.github {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"%3E%3Cpath fill="rgb(220, 230, 240)" d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5C64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9c26.4 39.1 77.9 32.5 104 26c5.7-23.5 17.9-44.5 34.7-60.8c-140.6-25.2-199.2-111-199.2-213c0-49.5 16.3-95 48.3-131.7c-20.4-60.5 1.9-112.3 4.9-120c58.1-5.2 118.5 41.6 123.2 45.3c33-8.9 70.7-13.6 112.9-13.6c42.4 0 80.2 4.9 113.5 13.9c11.3-8.6 67.3-48.8 121.3-43.9c2.9 7.7 24.7 58.3 5.5 118c32.4 36.8 48.9 82.7 48.9 132.3c0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9c177.1-59.7 304.6-227 304.6-424.1c0-247.2-200.4-447.3-447.5-447.3z"%2F%3E%3C%2Fsvg%3E') no-repeat center center;
+  /*
+        background:
+            url/map-get: - SASS built-in function
+            no-repeat   - default
+            center  -default
+            center -default
+    */
+  background-size: 20px;
+}
+
+.fsm-icons.instagram {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cpath fill="rgb(220, 230, 240)" d="M160 128a32 32 0 1 1-32-32a32.1 32.1 0 0 1 32 32Zm68-44v88a56 56 0 0 1-56 56H84a56 56 0 0 1-56-56V84a56 56 0 0 1 56-56h88a56 56 0 0 1 56 56Zm-52 44a48 48 0 1 0-48 48a48 48 0 0 0 48-48Zm16-52a12 12 0 1 0-12 12a12 12 0 0 0 12-12Z"%2F%3E%3C%2Fsvg%3E') no-repeat center center;
+  /*
+        background:
+            url/map-get: - SASS built-in function
+            no-repeat   - default
+            center  -default
+            center -default
+    */
+  background-size: 20px;
+}
+
+.fsm-icons.facebook {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="rgb(220, 230, 240)" d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02Z"%2F%3E%3C%2Fsvg%3E') no-repeat center center;
+  /*
+        background:
+            url/map-get: - SASS built-in function
+            no-repeat   - default
+            center  -default
+            center -default
+    */
+  background-size: 20px;
+}
+/*# sourceMappingURL=style.css.map */
